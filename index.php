@@ -20,14 +20,14 @@
         }
 
         public function getFullTitle(){
-            if($this -> $subtitle){
+            if($this -> subtitle){
                 return $this -> title . ": " . $this -> subtitle;  
             }else{
             return $this -> title;
         }}
 
         public function __toString(){
-            if($this -> $movieDirector){
+            if($this -> movieDirector){
                 return $this -> getFullTitle() . ": " . $this -> movieDirector; 
             }else{
             return $this -> getFullTitle() . "| " ."???";
