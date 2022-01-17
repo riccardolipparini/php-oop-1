@@ -20,29 +20,28 @@
         }
 
         public function getFullTitle(){
-            if($this -> $subtitle == "notFound"){
-                return $this -> title;
-            }else
-            return $this -> title . ": " . $this -> subtitle;
-        }
+            if($this -> $subtitle){
+                return $this -> title . ": " . $this -> subtitle;  
+            }else{
+            return $this -> title;
+        }}
 
         public function __toString(){
-            if($this -> $movieDirector == "notFound"){
-                return $this -> getFullTitle() . "| " ."???";
-            }else
-            return $this -> getFullTitle() . ": " . $this -> movieDirector;
-        }
+            if($this -> $movieDirector){
+                return $this -> getFullTitle() . ": " . $this -> movieDirector; 
+            }else{
+            return $this -> getFullTitle() . "| " ."???";
+        }}
     };
 
     $m1 = new Film("Matrix");
     $m2 = new Film("Fantozzi 2");
     $m3 = new Film("Peter Pan");
 
-    $m1 -> subtitle = "notFound";
-    $m1 -> movieDirector = "notFound";
+    
 
     $m2 -> subtitle = "il ritorno di fantozzi";
-    $m2 -> movieDirector = "notFound";
+    
 
     $m3 -> subtitle = "il ritorno dell'isola che non c'è";
     $m3 -> movieDirector = "Robin Budd";
