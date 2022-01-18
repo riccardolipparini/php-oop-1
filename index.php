@@ -20,11 +20,12 @@
         }
 
         public function getFullTitle(){
-            if($this -> subtitle){
-                return $this -> title . ": " . $this -> subtitle;  
-            }else{
-            return $this -> title;
-        }}
+             if($this -> subtitle){
+                 return $this -> title . ": " . $this -> subtitle;  
+             }else
+             return $this -> title;
+            // return $this -> title . (!$this -> subtitle ? `` :  ": " . $this -> subtitle);
+        }
 
         public function __toString(){
             if($this -> movieDirector){
